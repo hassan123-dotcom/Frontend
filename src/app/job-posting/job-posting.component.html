@@ -1,0 +1,102 @@
+<body>
+  <div class="demo">
+    <div class="marg">
+<div class="row">
+  <div class="col-4 m-auto">
+    <div class="card m-auto">
+      <div class="wrapper fadeInDown">
+         <div class="fadeIn first">
+            <div class="card-header">
+               <h3 class="applys">Post a Job</h3>
+              </div>
+             </div>
+              <div class="card-body">
+
+                <form [formGroup]="jobpostform" (ngSubmit)="onSubmit()">
+                  <div class="form-group col-12">
+                      <label for="name" class="form-label">Job Title</label>
+                      <input type="text" placeholder="Enter Job Title" class="form-control" formControlName="jobTitle">
+
+                      <span *ngIf="!jobTitle.valid && jobTitle.touched" class="error-block">
+                        *please provide required title
+                    </span>
+
+                    </div>
+
+                  <div class="form-group col-12">
+                    <label for="experiance" class="form-label">Required Experiance</label>
+                    <input type="text" placeholder="Enter Experiance required" class="form-control" formControlName="experiance">
+
+                    <span *ngIf="!experiance.valid && experiance.touched" class="error-block">
+                      *please provide required experiance
+                  </span>
+                  </div>
+
+                  <div class="form-group col-12">
+                    <label for="Position Type" class="form-label">Position Type</label>
+                    <input type="text" placeholder="Enter type of position" class="form-control" formControlName="position">
+
+                    <span *ngIf="!position.valid && position.touched" class="error-block">
+                      *please provide position type
+                  </span>
+                  </div>
+
+                  <div class="form-group col-12">
+                    <label for="Date Opened" class="form-label">Closing Date</label>
+                    <input type="datetime" placeholder="Enter the end date" class="form-control" formControlName="dateopened">
+                    <span *ngIf="!dateopened.valid && dateopened.touched" class="error-block">
+                      *please provide valid date
+                  </span>
+                  </div>
+<!--////////
+                  <div class="form-group col-12">
+                    <label for="Date Closed" class="form-label">Date Closed</label>
+                    <input type="datetime" placeholder="Enter the date closed" class="form-control" formControlName="dateclosed">
+                    <span *ngIf="!dateclosed.valid && dateclosed.touched" class="error-block">
+                      *please provide valid date
+                  </span>
+                  </div>
+                  -->
+                  <div class="form-group col-12">
+                    <label for="RequestedDatetoClose" class="form-label">Required Skills</label>
+                    <input type="datetime" placeholder="Enter Skills Required" class="form-control" formControlName="reqSkills">
+                    <span *ngIf="!reqSkills.valid && reqSkills.touched" class="error-block">
+                      *please provide Skills
+                  </span>
+                  </div>
+
+
+                  <!-- ///////// -->
+                  <div class="form-group col-12">
+                    <label for="RequiredResources" class="form-label">Available Seats </label>
+                    <input type="text" placeholder="Enter the Available Seats" class="form-control" formControlName="reqresources">
+                    <span *ngIf="!reqresources.valid && reqresources.touched" class="error-block">
+                      *please provide valid Input
+                  </span>
+                  </div>
+
+                  <!-- <div class="form-group col-12">
+                    <label for="RequestedDatetoClose" class="form-label">Requested Date to close</label>
+                    <input type="datetime" placeholder="Enter the date opened" class="form-control" formControlName="reqdatetoclose">
+                    <span *ngIf="!reqdateclose.valid && reqdateclose.touched" class="error-block">
+                      *please provide valid date
+                  </span>
+                  </div> -->
+
+                  <!-- ............ -->
+
+                  <div class="form-group col-12">
+                    <button  type="submit" class="btn btn-primary">Post</button>
+                    <button type="reset" class="btn btn-secondary ml-2">Reset</button>
+                   </div>
+                  </form>
+                    </div>
+
+
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+  </div>
+</body>

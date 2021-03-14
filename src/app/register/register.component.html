@@ -1,0 +1,274 @@
+
+<!--
+
+  <div class="row">
+      <div class="col-6 m-auto">
+      <div class="card m-auto">
+        <div class="card-header">
+          Register Company
+        </div> -->
+
+        <!-- <body>
+          <h2>Form on Hero Image</h2>
+<div class="bg-img">
+  <form action="/action_page.php" class="container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+  </form>
+</div>
+
+
+
+
+
+</body> -->
+
+<!-- llalala -->
+
+<!-- <body>
+
+<div class="bg-img">
+<div class="row">
+  <div class="col-5 m-auto">
+    <div class="card m-auto">
+      <div class="wrapper fadeInDown">
+         <div class="fadeIn first">
+            <div class="card-header">
+               <h3 class="applys">Register Company</h3>
+              </div>
+             </div>
+              <div class="card-body">
+
+                <form class="container" [formGroup]="registerationForm" (ngSubmit)="onSubmit()">
+                   <div class="form-group col-12">
+                     <label for="name" class="form-label">Company Name</label>
+                      <input type="text" class="form-control" formControlName="companyName" >
+                      <span *ngIf="!companyName.valid && (companyName.touched || userSubmitted)"
+                       class="error-block"> Please provide Your Company Name </span>
+                      </div>
+
+
+                      <div class="form-group col-12"> <label for="ownerName" class="form-label">Owner</label>
+                        <input type="text" class="form-control" formControlName="ownerName">
+                         <span *ngIf="!ownerName.valid && (ownerName.touched || userSubmitted)" class="error-block">
+                          </span>
+                        </div>
+
+
+                        <div class="form-group col-12"> <label for="registeredDate" class="form-label" >Register Date </label>
+                           <input type="registeredDate" class="form-control" formControlName="registeredDate">
+                            <span *ngIf="!registeredDate.valid
+                            && (registeredDate.touched || userSubmitted)" class="error-block">
+                            Please provide registeredDate <!-- && (registeredDate.touched || userSubmitted)  </span>
+                          </div>
+                          <div class="form-group col-12"> <label for="companyAddress" class="form-label">Company Address</label>
+                             <input type="text" class="form-control" formControlName="companyAddress">
+                              <span class="confirm" *ngIf="!companyAddress.valid && (companyAddress.touched || userSubmitted)">
+                                Invalid companyAddress!
+                              </span>
+                              </div>
+
+                                <div class="form-group col-12">
+                                   <button type="submit" class="btn btn-primary">Register</button>
+                                   <button type="reset" class="btn btn-secondary ml-2">Cancel</button>
+                                  </div>
+                                 </form>
+                                  </div>
+                                 </div>
+                                 </div>
+                                 </div>
+                                 </div>
+                                </div>
+                                </body> -->
+
+                                <!-- <div class="bg"></div> -->
+
+                              <!-- <div class="Home">
+                                <div class="wrapper fadeInDown"> -->
+                                    <!-- <div id="formContent"> -->
+                                      <!-- Tabs Titles -->
+                                      <!-- <div class="row">
+                                        <div class="col-12 m-auto">
+                                          <div class="card m-auto">
+                                      Icon -->
+                                      <!-- <div class="fadeIn first">
+                                          <h2 class="align-content-center">Register Your Company Here!</h2>
+                                      </div> -->
+                                      <body>
+                                        <div class="demo">
+                                          <div class="marg">
+                                      <div class="row">
+                                        <div class="col-5 m-auto">
+                                          <div class="card m-auto">
+                                            <div class="wrapper fadeInDown">
+                                               <div class="fadeIn first">
+                                                  <div class="card-header">
+                                                     <h3 class="applys">Register Company</h3>
+                                                    </div>
+                                                   </div>
+                                                    <div class="card-body">
+
+                                                      <form [formGroup]="registerationForm" (ngSubmit)="onSubmit()">
+                                                        <div class="form-group col-12">
+                                                            <label for="name" class="form-label">Company Name</label>
+                                                            <input type="text" placeholder="Enter the name of company" class="form-control" formControlName="companyName">
+
+                                                            <span *ngIf="!companyName.valid && companyName.touched" class="error-block">
+                                                              *please provide required title
+                                                          </span>
+
+                                                          </div>
+
+                                                        <div class="form-group col-12">
+                                                          <label for="ownerName" class="form-label">Owner</label>
+                                                          <input type="text" placeholder="Enter Owner's name" class="form-control" formControlName="ownerName">
+
+                                                          <span *ngIf="!ownerName.valid && ownerName.touched" class="error-block">
+                                                            *please provide required skills
+                                                        </span>
+                                                        </div>
+
+                                                        <div class="form-group col-12">
+                                                          <label for="registeredDate" class="form-label">Register Date</label>
+                                                          <input type="registeredDate" placeholder="Enter registered date" class="form-control" formControlName="registeredDate">
+
+                                                          <span *ngIf="!registeredDate.valid && registeredDate.touched" class="error-block">
+                                                            *please provide registered date
+                                                        </span>
+                                                        </div>
+
+                                                        <div class="form-group col-12">
+                                                          <label for="companyAddress" class="form-label">Company Address</label>
+                                                          <input type="text" placeholder="Enter company's address" class="form-control" formControlName="companyAddress">
+                                                          <span *ngIf="!companyAddress.valid && companyAddress.touched" class="error-block">
+                                                            *please provide valid company address
+                                                        </span>
+                                                        </div>
+
+                                                        <div class="form-group col-12">
+                                                          <button type="submit" (click)="onSubmit()" class="btn btn-primary">Register</button>
+                                                          <button type="reset" class="btn btn-secondary ml-2">Cancel</button>
+                                                         </div>
+                                                        </form>
+                                                          </div>
+
+
+                                                      </div>
+
+
+
+
+
+
+
+
+
+<!--
+  /////////////////////////// -->
+
+
+  <!-- <body>
+    <div class="demo">
+      <div class="marg">
+<div class="row">
+<div class="col-5 m-auto">
+<div class="card m-auto">
+ <div class="wrapper fadeInDown">
+
+   <div class="fadeIn first">
+     <div class="card-header" >
+       <h2 class="apply">Apply for Job!</h2>
+     </div>
+       </div>
+
+
+ <div class="card-body">
+
+ </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body> -->
+
+  <!-- ///////////////////////// -->
+  <!-- <div class="row">
+    <div class="col-6 m-auto">
+    <div class="card m-auto">
+      <div class="card-header">
+        Register
+      </div>
+      <div class="card-body">
+        <form [formGroup]="registerationForm" (ngSubmit)="onSubmit()">
+          <div class="form-group col-12">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" formControlName="userName">
+  <span *ngIf="!userName.valid && (userName.touched || userSubmitted)" class="error-blocks">
+    Please provide name
+  </span>
+    </div>
+
+          <div class="form-group col-12">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" formControlName="email">
+            <span *ngIf="!email.valid && (email.touched || userSubmitted)" class="error-blocks">
+
+              <span *ngIf="email.hasError('required')">Please provide email</span>
+              <span *ngIf="email.hasError('email')">Please provide valid email</span>
+
+            </span>
+          </div>
+
+
+
+          <div class="form-group col-12">
+            <label for="passwrod" class="form-label">Password</label>
+            <input type="password" class="form-control" formControlName="password">
+            <span *ngIf="!password.valid && (password.touched || userSubmitted)" class="error-blocks">
+              <span *ngIf="password.errors['required']">Please provide password</span>
+              <span *ngIf="password.errors.minlength">Password must be minimum of 8 characters</span>
+
+            </span>
+          </div>
+
+          <div class="form-group col-12">
+            <label for="cpassword" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" formControlName="confirmPassword">
+            <span *ngIf="!confirmPassword.valid && (confirmPassword.touched || userSubmitted)" class="error-blocks">
+              <span *ngIf="confirmPassword.hasError('required')">Please confirm password</span>
+             </span>
+
+
+             <span *ngIf="registerationForm.hasError('notmatched') && confirmPassword.valid" class="red">Password not Matched</span>
+          </div>
+
+          <div class="form-group col-12">
+            <label for="mobile" class="form-label">Mobile</label>
+            <input type="text" class="form-control" formControlName="mobile">
+            <span *ngIf="!mobile.valid && (mobile.touched || userSubmitted)" class="error-blocks">
+              Please provide password
+            </span>
+          </div>
+
+          <div class="form-group col-12">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="reset" class="btn btn-secondary ml-2">Cancel</button>
+          </div>
+
+           Form Values : registerationForm.value | json <br />
+           Form Status : registerationForm.status | json
+
+        </form>
+      </div>
+    </div>
+    </div>
+  </div> -->

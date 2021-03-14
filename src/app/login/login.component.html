@@ -1,0 +1,35 @@
+
+<body class="Home">
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+      <div class="fadeIn first">
+      <h3 class="log">Login</h3>
+      </div>
+
+      <!-- Login Form -->
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="User Name"
+      formControlName="userName">
+      <div>
+      <span *ngIf="!userName.valid && (userName.touched || userLogin)"
+      class="error-block">
+        Invalid UserName!
+      </span>
+    </div>
+      <input type="password"  class="fadeIn fourth"  placeholder="password" formControlName="userPassword" >
+      <input type="submit"  class="fadeIn fourth" value="Log In">
+      </form>
+
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+      <div id="formFooter">
+      <a class="underlineHover" (click)='onCreate()' routerLink=''>Create Account</a>
+      </div>
+    </div>
+  </div>
+  </body>

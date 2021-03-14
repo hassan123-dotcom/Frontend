@@ -1,0 +1,85 @@
+
+<!-- <body class="Home"> -->
+  <!-- <div class="wrapper fadeInDown"> -->
+    <!-- <div id="formContent"> -->
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+      <!-- <div class="fadeIn first">
+      Login
+      </div> -->
+
+      <body>
+        <div class="demo">
+          <div class="marg">
+ <div class="row">
+   <div class="col-5 m-auto">
+   <div class="card m-auto">
+     <div class="wrapper fadeInDown">
+
+       <div class="fadeIn first">
+         <div class="card-header" >
+           <h2 class="apply">Search for Job!</h2>
+         </div>
+           </div>
+
+
+     <div class="card-body">
+       <form [formGroup]="applyform" (ngSubmit)="onSubmit()">
+         <div class="form-group col-12">
+             <label for="title" class="form-label">Job Title</label>
+             <input type="text" placeholder="Enter the title of job" class="form-control" formControlName="jobtitle">
+
+             <span *ngIf="!jobtitle.valid && jobtitle.touched" class="error-block">
+               *please provide required title
+           </span>
+
+           </div>
+
+         <div class="form-group col-12">
+           <label for="skill" class="form-label">Skill</label>
+           <input type="text" placeholder="Enter your skills" class="form-control" formControlName="skill">
+
+           <span *ngIf="!skill.valid && skill.touched" class="error-block">
+             *please provide required skills
+         </span>
+         </div>
+
+         <div class="form-group col-12">
+           <label for="destination" class="form-label">Destination</label>
+           <input type="text" placeholder="Enter destination" class="form-control" formControlName="destination">
+
+           <span *ngIf="!destination.valid && destination.touched" class="error-block">
+             *please provide required place
+         </span>
+         </div>
+
+         <div class="form-group col-12">
+           <label for="min-salary" class="form-label">Min-Salary</label>
+           <input type="number" placeholder="Salary must be greater than 3 digits" class="form-control" formControlName="minsalary">
+           <span *ngIf="!minsalary.valid && minsalary.touched" class="error-block">
+             *please provide salary
+         </span>
+         </div>
+
+
+         <div class="form-group col-12">
+           <button  [disabled]="!applyform.valid"  type="submit" class="btn btn-primary">Search</button>
+           <button type="reset" class="btn btn-secondary ml-2">Cancel</button>
+
+         </div>
+
+         <!--
+           (click)="onBack()"
+           Form Values: {{applyform.value | json}}<br/>
+         Form Status: {{applyform.valid | json}} -->
+
+       </form>
+     </div>
+   </div>
+   </div>
+ </div>
+   </div>
+   </div>
+   </div>
+   </body>

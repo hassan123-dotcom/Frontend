@@ -1,0 +1,91 @@
+<html >
+<body class="example">
+  <div class="demo">
+    <!-- <div class="marg"> -->
+<div class="row">
+<div class="col-5 m-auto">
+<div class="card m-auto">
+<div class="wrapper fadeInDown">
+
+ <div class="fadeIn first">
+   <div class="card-header" >
+     <h2 class="apply">Create Account</h2>
+   </div>
+     </div>
+
+
+<div class="card-body">
+ <form [formGroup]='signUpForm' (ngSubmit)="onSignup()">
+   <div class="form-group col-12">
+       <label for="name" class="form-label">Enter Name</label>
+       <input type="text" id="name" placeholder="Enter your name" class="form-control" formControlName="fullName">
+
+       <span *ngIf="!fullName.valid && fullName.touched" class="error-block">
+         *please provide your name
+     </span>
+
+     </div>
+
+   <div class="form-group col-12">
+     <label for="email" class="form-label">Enter Email</label>
+     <input type="text" placeholder="Enter your skills" class="form-control" formControlName="userEmail">
+
+     <span *ngIf="!userEmail.valid && userEmail.touched" class="error-block">
+       *please provide valid email
+   </span>
+   </div>
+
+   <div class="form-group col-12">
+     <label for="username" class="form-label">Enter username</label>
+     <input type="text" id="name" placeholder="your username" class="form-control" formControlName="userName">
+
+     <span *ngIf="!userName.valid && userName.touched" class="error-block">
+       *please provide username
+   </span>
+   </div>
+
+   <div class="form-group col-12">
+     <label for="password" class="form-label">Enter Password</label>
+     <input type="password" placeholder="Enter Password" class="form-control" formControlName="userPassword">
+     <span *ngIf="!userPassword.valid && userPassword.touched" class="error-block">
+       *please provide password
+   </span>
+   </div>
+
+   <div class="form-group col-12">
+    <label for="re_password" class="form-label">Confirm Password</label>
+    <input type="password" id="re_password" placeholder="Type Password Again" class="form-control" formControlName="confirmPassword">
+    <span *ngIf="!confirmPassword.valid && confirmPassword.touched" class="error-block">
+      *Please confirm password
+  </span>
+  <span class="confirm" *ngIf="signUpForm.hasError('notmatched') && confirmPassword.valid">
+    Password not matched
+  </span>
+
+  </div>
+  <div class="form-group">
+    <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" required />
+    <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+</div>
+<div class="form-group">
+    <button  type="button" name="submit" id="submit" class="form-submit" (click)="onSignup()">signup</button>
+</div>
+</form>
+<p class="loginhere">
+Have already an account ? <a type="Button" (click)="onLogin()" class="loginhere-link">Login here</a>
+</p>
+
+   <!-- Form Values: {{applyform.value | json}}<br/>
+   Form Status: {{applyform.valid | json}} -->
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- </div> -->
+
+</body>
+</html>

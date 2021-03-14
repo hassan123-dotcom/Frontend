@@ -1,0 +1,48 @@
+.topnav a:hover {
+  border-bottom: 3px solid red;
+  border-color: gold;
+
+}
+.navbar{
+
+  border-bottom: white;
+
+
+}
+
+.navlink a{
+  color:white;
+
+}
+#bos{
+  color:white;
+  font-size: 18px;
+}
+#bo{
+  color:white;
+  font-size: 18px;
+}
+
+#lol{
+  background-color: white;
+}
+
+
+.float{
+  float:right;
+  margin-top: 10px;
+  margin-right: -20px;
+
+}
+.dropdown-menu{
+  list-style: none;
+}
+
+#mar{
+
+  margin-right: 7px;
+}
+
+#mr{
+  padding-right:7px;
+}
